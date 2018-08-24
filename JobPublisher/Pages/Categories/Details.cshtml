@@ -1,0 +1,40 @@
+﻿@page
+@model JobPublisher.Pages.Categories.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="categories-details">
+    <h2>Details</h2>
+    <div>
+        <h4>Category</h4>
+        <hr />
+        <div class="row">
+            <div class="col-lg-6">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Category.CateogryName)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Category.CateogryName)
+                    </dd>
+                </dl>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="text-center">@Html.DisplayNameFor(model => model.Category.CategoryDescription)</h5>
+                        <div class="content">
+                            <p>
+                                @Html.DisplayFor(model => model.Category.CategoryDescription)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Back to List</a>
+    </div>
+
+</div>

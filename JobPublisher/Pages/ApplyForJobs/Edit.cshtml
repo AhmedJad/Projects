@@ -1,0 +1,38 @@
+﻿@page
+@model JobPublisher.Pages.ApplyForJobs.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>ApplyForJob</h4>
+<h4 class="text-danger">@ViewBag.EditMessage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ApplyForJob.Id" />
+            <input type="hidden" asp-for="ApplyForJob.UserId" />
+            <input type="hidden" asp-for="ApplyForJob.JobId" />
+            <div class="form-group">
+                <label asp-for="ApplyForJob.Message" class="control-label"></label>
+                <textarea asp-for="ApplyForJob.Message" class="form-control"></textarea>
+                <span asp-validation-for="ApplyForJob.Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Index">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

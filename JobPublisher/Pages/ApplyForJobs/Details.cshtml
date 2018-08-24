@@ -1,0 +1,46 @@
+﻿@page
+@model JobPublisher.Pages.ApplyForJobs.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="apply-for-job-details">
+    <h2>Details</h2>
+    <div>
+        <h4>ApplyForJob</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ApplyForJob.ApplyDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ApplyForJob.ApplyDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ApplyForJob.Job)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ApplyForJob.Job.jobTitle)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ApplyForJob.User)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ApplyForJob.User.UserName)
+            </dd>
+        </dl>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>@Html.DisplayNameFor(model => model.ApplyForJob.Message)</h3>
+            <div class="job-message">
+                <p>@Html.DisplayFor(model => model.ApplyForJob.Message)</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a asp-page="/Index">Back to Home</a>
+    </div>
+</div>
+

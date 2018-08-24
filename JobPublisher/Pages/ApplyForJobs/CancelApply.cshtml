@@ -1,0 +1,17 @@
+﻿@page
+@model JobPublisher.Pages.ApplyForJobs.CancelApplyModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you want to cancel apply to this job</h3>
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="ApplyForJob.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="/Index">Back to Home</a>
+    </form>
+</div>

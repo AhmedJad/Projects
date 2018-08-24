@@ -1,0 +1,37 @@
+﻿@page
+@model JobPublisher.Pages.Jobs.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].jobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Job) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.jobTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CateogryName)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

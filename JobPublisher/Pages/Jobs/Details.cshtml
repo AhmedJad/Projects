@@ -1,0 +1,61 @@
+﻿@page
+@model JobPublisher.Pages.Jobs.DetailsModel
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="jobs-details">
+    <h2>Details</h2>
+    <div>
+        <h4>Job</h4>
+        <hr />
+        <div class="row">
+            <div class="col-lg-5">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Job.jobTitle)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Job.jobTitle)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Job.User)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Job.User.UserName)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Job.Category)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Job.Category.CateogryName)
+                    </dd>
+                </dl>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="text-center">@Html.DisplayNameFor(model => model.Job.JobContent)</h5>
+                        <div class=" content">
+                            <p>
+                                @Html.DisplayFor(model => model.Job.JobContent)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="image">
+                            <img src="~/JobImages/@Model.Job.JobImage" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a asp-page="@HttpContext.Session.GetString("LastUrl").ToString()">Back</a>
+    </div>
+
+</div>

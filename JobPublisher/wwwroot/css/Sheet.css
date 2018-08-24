@@ -1,0 +1,124 @@
+﻿/*Jobs*/
+
+/*Details*/
+.jobs-details .row .image img {
+    min-width: 70%;
+    max-width: 70%;
+    max-height: 500px;
+    min-height: 500px;
+    border: 2px solid #dacdcd;
+    border-radius: 20px;
+    box-shadow: 5px 10px #888888;
+}
+
+.jobs-details .row .content {
+    border: 1px solid #dacdcd;
+    max-height: 316px;
+    min-height: 316px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+    box-shadow: 5px 10px #888888;
+}
+
+    .jobs-details .row .content p {
+        margin-left: 15px;
+    }
+/*Details*/
+
+/*Jobs*/
+
+/*Cateogries*/
+/*Details*/
+.categories-details .row .content {
+    border: 1px solid #dacdcd;
+    max-height: 316px;
+    min-height: 316px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+    .categories-details .row .content p {
+        margin-left: 15px;
+    }
+/*Details*/
+/*Cateogries*/
+/*Home*/
+/*Index*/
+.home-index img {
+    min-width: 220px;
+    max-width: 220px;
+    max-height: 250px;
+    min-height: 250px;
+    border-radius: 10px;
+    border: 1px solid #2d91b9;
+    box-shadow: 5px 10px #888888;
+}
+
+.home-index .index {
+    margin-top: 50px;
+}
+.home-index .index .jobs{
+    overflow:auto;
+    max-height:380px;
+}
+.home-index .row .job-title {
+    text-align: center;
+    color: #bfbec3;
+}
+.home-index .row .jobs-btns {
+    position: absolute;
+    bottom: 10px;
+}
+
+.home-index .row .jobs-btns a {
+    min-width: 50px;
+    max-width: 50px;
+    font-size: 10px;
+    border-radius: 10px;
+    margin: -1px;
+}
+
+.home-index .row .jobs-btns span{
+    margin-right:15px;
+}
+.home-index .row .jobs-btns span a {
+    border-radius: 25px;
+    border:1px solid red;
+}
+.home-index .index .side-bar {
+    margin-top: 23px;
+}
+
+.home-index .index .side-bar .header {
+    background: #2d91b9;
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    line-height: 31px;
+}
+
+.home-index .index .side-bar form button,
+.home-index .index .side-bar form a {
+    min-width: 150px;
+    max-width: 150px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+/*Index*/
+/*Home*/
+/*Apply for Jobs*/
+.apply-for-job-details .row .job-message {
+    max-height: 250px;
+    min-height: 250px;
+    border-radius: 10px;
+    border: 1px solid #2d91b9;
+    box-shadow: 5px 10px #888888;
+    margin-bottom: 20px;
+}
+
+    .apply-for-job-details .row .job-message p {
+        margin-left: 10px;
+    }
+/*Apply for Jobs*/

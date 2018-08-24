@@ -1,0 +1,88 @@
+﻿@page
+@model JobPublisher.Pages.Home.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    int RowSize = 4;
+}
+
+
+<div class="home-index">
+    <div class="index row">
+        <div class="side-bar col-lg-2">
+            <div class="header text-center">Menu</div>
+            <form method="post">
+                @if (HttpContext.User.IsInRole("Publisher"))
+                {
+                    <a class="btn btn-default " href="/Jobs/Create">New job</a>
+                    <button class="btn btn-default" asp-page-handler="PublisherAppliedJobs">Applied jobs</button>
+                    <button class="btn btn-default" asp-page-handler="PublishedJobs">Published jobs</button>
+                }
+                @if (HttpContext.User.IsInRole("Applier"))
+                {
+                    <button class="btn btn-default" asp-page-handler="UserAppliedJobs">Applied jobs</button>
+                }
+                @if (HttpContext.User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-default " href="/Jobs">Manage Jobs</a>
+                    <a class="btn btn-default " href="/Categories">Manage Categories</a>
+                }
+            </form>
+        </div>
+        <div class="jobs col-lg-10 col-md-9">
+            @for (int i = 0; i < Model.Job.Count(); i += RowSize)
+            {
+                <div class="row">
+                    @for (int j = i; j < i + RowSize && j < Model.Job.Count(); j++)
+                    {
+                        <div class="col-lg-3 col-md-3">
+                            <h3 class="job-title">@Model.Job[j].jobTitle</h3>
+                            <hr />
+                            <img src="~/JobImages/@Model.Job[j].JobImage" />
+                            <div class="jobs-btns">
+                                @if (HttpContext.User.Identity.IsAuthenticated)
+                                {
+                                    if (HttpContext.User.IsInRole("Publisher"))
+                                    {
+                                        if (await Model.IsApplied(Model.Job[j].Id))
+                                        {
+                                            <span><a class="btn btn-primary" asp-page="/ApplyForJobs/Details" asp-route-id="@Model.Job[j].Id">Applied</a></span>
+
+                                        }
+                                        if (await Model.IsPublished(Model.Job[j].Id))
+                                        {
+                                            <a asp-page="/Jobs/Edit" asp-route-id="@Model.Job[j].Id" class="btn btn-primary">Edit</a>
+                                            <a asp-page="/Jobs/Delete" asp-route-id="@Model.Job[j].Id" class="btn btn-danger">Delete</a>
+
+                                        }
+
+                                    }
+                                    if (HttpContext.User.IsInRole("Applier"))
+                                    {
+                                        if (await Model.IsApplied(Model.Job[j].Id))
+                                        {
+                                            <span><a class="btn btn-primary" asp-page="/ApplyForJobs/Details" asp-route-id="@Model.Job[j].Id">Applied</a></span>
+                                            <a asp-page="/ApplyForJobs/CancelApply" asp-route-id="@Model.Job[j].Id" class="btn btn-danger">Cancel</a>
+                                            <a asp-page="/ApplyForJobs/Edit" asp-route-id="@Model.Job[j].Id" class="btn btn-primary">Edit</a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-page="/ApplyForJobs/ApplyJob" asp-route-id="@Model.Job[j].Id" class="btn btn-primary">Apply</a>
+                                        }
+
+                                    }
+                                    if (HttpContext.User.IsInRole("Admin"))
+                                    {
+                                        <a asp-page="/Jobs/Delete" asp-route-id="@Model.Job[j].Id" class="btn btn-danger">Delete</a>
+                                    }
+                                }
+                                <a asp-page="/Jobs/Details" asp-route-id="@Model.Job[j].Id" class="btn btn-success">Details</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

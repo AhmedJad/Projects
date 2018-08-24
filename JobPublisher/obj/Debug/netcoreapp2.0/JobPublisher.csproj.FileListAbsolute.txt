@@ -1,0 +1,24 @@
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.deps.json
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.runtimeconfig.json
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.runtimeconfig.dev.json
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.dll
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.pdb
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.csproj.CoreCompileInputs.cache
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.AssemblyInfoInputs.cache
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.AssemblyInfo.cs
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.dll
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.pdb
+D:\.net development\text\ASP.net Core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.csprojAssemblyReference.cache
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.deps.json
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.runtimeconfig.json
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.runtimeconfig.dev.json
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.dll
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\bin\Debug\netcoreapp2.0\JobPublisher.pdb
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.csprojAssemblyReference.cache
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.csproj.CoreCompileInputs.cache
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.AssemblyInfoInputs.cache
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.AssemblyInfo.cs
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.dll
+D:\.net development\text\asp.net\ASP.net Core\Asp.net core\projects\JobPublisher\JobPublisher\obj\Debug\netcoreapp2.0\JobPublisher.pdb

@@ -1,0 +1,48 @@
+﻿@page
+@model JobPublisher.Pages.Jobs.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Job</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Job.jobTitle" class="control-label"></label>
+                <input asp-for="Job.jobTitle" class="form-control" />
+                <span asp-validation-for="Job.jobTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Job.JobContent" class="control-label"></label>
+                <textarea asp-for="Job.JobContent" class="form-control"></textarea>
+                <span asp-validation-for="Job.JobContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Job.JobImage" class="control-label"></label>
+                <input type="file" name="files" class="form-control" />
+                <span asp-validation-for="Job.JobImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Job.CategoryId" class="control-label"></label>
+                <select asp-for="Job.CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Index">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
